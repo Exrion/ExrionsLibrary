@@ -1,4 +1,4 @@
-package ExrionsLibrary;
+package ExrionsLibrary.ExrionsLibrary;
 
 /**
 * Validator helps to ensure entered data is valid, such as preventing empty String entries and negative integers when it should be positive
@@ -88,6 +88,15 @@ public class Validator {
 	public static char readChar(String msg) {
 		char inputMsg = Helper.readChar(msg);
 		while(inputMsg <= 0) {
+			System.out.println("Invalid value, please re-enter");
+			inputMsg = Helper.readChar(msg);			
+		}
+		return inputMsg;
+	}
+	
+	public static char readCharGender(String msg) {
+		char inputMsg = Helper.readChar(msg);
+		while(!(inputMsg == 'M' || inputMsg == 'm' || inputMsg == 'F' || inputMsg == 'f')) {
 			System.out.println("Invalid value, please re-enter");
 			inputMsg = Helper.readChar(msg);			
 		}
