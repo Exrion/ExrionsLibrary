@@ -94,6 +94,11 @@ public class Validator {
 		return inputMsg;
 	}
 	
+	/**
+	* Validates that the char entered is either 'm' or 'f' (case insensitive)
+	* @param msg : A message to send to console output for the user to enter a value
+	* @return Returns the value that the user entered.
+	*/
 	public static char readCharGender(String msg) {
 		char inputMsg = Helper.readChar(msg);
 		while(!(inputMsg == 'M' || inputMsg == 'm' || inputMsg == 'F' || inputMsg == 'f')) {
