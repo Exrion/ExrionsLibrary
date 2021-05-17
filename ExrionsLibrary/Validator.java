@@ -1,4 +1,4 @@
-package ExrionsLibrary.ExrionsLibrary;
+package ExrionsLibrary;
 
 /**
 * Validator helps to ensure entered data is valid, such as preventing empty String entries and negative integers when it should be positive
