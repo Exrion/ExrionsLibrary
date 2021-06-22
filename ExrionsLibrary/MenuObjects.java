@@ -17,7 +17,7 @@ public class MenuObjects {
 	* Adds an option to the stored ArrayList
 	* @param option : String value to be stored in the ArrayList
 	*/
-	public static void addOption(String option) {
+	public void addOption(String option) {
 		optionList.add(new String(option));
 	}
 
