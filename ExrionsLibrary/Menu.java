@@ -12,18 +12,39 @@ import java.util.ArrayList;
 */
 
 public class Menu {	
+	private static ArrayList<String> optionList = new ArrayList<String>();
+	
 	/**
 	* Prints a menu
 	* @param menu : An ArrayList, preferably from MenuObjects that holds the Strings to be printed
 	* @param title : The main title of the menu
 	*/
-	public static void printMenu(ArrayList<String> menu, String title) {
+	public void printMenu(String title) {
+		printTitle(title);
+		for(int i = 0; i < optionList.size(); i++) {
+			System.out.printf("%d. %s\n", i + 1, optionList.get(i));
+		}
+		Helper.line(40, "-");
+	}
+	
+	public static void printTitle(String title) {
 		Helper.line(40, "=");
 		System.out.println(title);
 		Helper.line(40, "=");
-		for(int i = 0; i < menu.size(); i++) {
-			System.out.printf("%d. %s\n", i + 1, menu.get(i));
-		}
-		Helper.line(40, "-");
+	}
+	
+	/**
+	* Adds an option to the stored ArrayList
+	* @param option : String value to be stored in the ArrayList
+	*/
+	public void addOption(String option) {
+		optionList.add(new String(option));
+	}
+
+	/**
+	* Returns the stored ArrayList
+	*/
+	public ArrayList<String> getOptionList() {
+		return optionList;
 	}
 }
