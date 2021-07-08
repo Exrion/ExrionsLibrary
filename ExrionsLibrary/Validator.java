@@ -5,7 +5,7 @@ package ExrionsLibrary;
 * Personal property of Titus Lim (Exrion)
 *
 * @author  Titus Lim
-* @version 1.0
+* @version 1.1
 * @since   2021-05-17
 */
 

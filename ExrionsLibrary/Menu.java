@@ -7,7 +7,7 @@ import java.util.ArrayList;
 * Personal property of Titus Lim (Exrion)
 *
 * @author  Titus Lim
-* @version 1.0
+* @version 1.1
 * @since   2021-05-17
 */
 
@@ -27,6 +27,10 @@ public class Menu {
 		Helper.line(40, "-");
 	}
 	
+	/**
+	* Prints a title
+	* @param title : The title of this menu
+	*/
 	public static void printTitle(String title) {
 		Helper.line(40, "=");
 		System.out.println(title);
