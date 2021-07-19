@@ -2,6 +2,7 @@ package ExrionsLibrary;
 
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Helper {
 
@@ -10,6 +11,19 @@ public class Helper {
     System.out.print(prompt);
     return new java.util.Scanner(System.in).nextLine();
   }
+
+	public static String readStringRegEx(String prompt, String pattern) {
+		String input = readString(prompt);	
+		boolean matched = Pattern.matches(pattern, input);
+
+		while (!matched) {
+			System.out.println("Invalid input!");
+			input = readString(prompt);
+			matched = Pattern.matches(pattern, input);
+		}
+		return input;
+
+	}
 
   public static int readInt(String prompt) {
     int input = 0;
